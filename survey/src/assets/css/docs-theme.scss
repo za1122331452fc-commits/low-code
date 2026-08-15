@@ -1,0 +1,190 @@
+/* ==========================================================
+   docs-theme.scss —— 全局"技术文档"风格主题
+   主要手段：覆盖 Element Plus 的 CSS 变量（--el-*），
+   因此无论组件样式何时注入，颜色/圆角/字体都会一致生效。
+   ========================================================== */
+
+:root {
+  /* ---------- 品牌色：文档靛蓝 ---------- */
+  --el-color-primary: #3451b2;
+  --el-color-primary-light-3: #5c73c4;
+  --el-color-primary-light-5: #8d9ed8;
+  --el-color-primary-light-7: #b6c1e6;
+  --el-color-primary-light-8: #ccd4ee;
+  --el-color-primary-light-9: #e6eaf7;
+  --el-color-primary-dark-2: #2a407e;
+
+  --el-color-success: #2f9e44;
+  --el-color-success-light-3: #5cb36d;
+  --el-color-success-light-5: #89c895;
+  --el-color-success-light-7: #b5dcbe;
+  --el-color-success-light-8: #cde6d2;
+  --el-color-success-light-9: #e8f5eb;
+  --el-color-success-dark-2: #267e36;
+
+  --el-color-warning: #e67700;
+  --el-color-warning-light-3: #ec9839;
+  --el-color-warning-light-5: #f2b973;
+  --el-color-warning-light-7: #f7d6ab;
+  --el-color-warning-light-8: #fae3c7;
+  --el-color-warning-light-9: #fdf3e6;
+  --el-color-warning-dark-2: #b85f00;
+
+  --el-color-error: #e03131;
+  --el-color-error-light-3: #e86060;
+  --el-color-error-light-5: #ef9090;
+  --el-color-error-light-7: #f6c0c0;
+  --el-color-error-light-8: #f9d5d5;
+  --el-color-error-light-9: #fdecec;
+  --el-color-error-dark-2: #b32727;
+
+  --el-color-info: #868e96;
+  --el-color-info-light-3: #a5abb1;
+  --el-color-info-light-5: #c3c8cc;
+  --el-color-info-light-7: #e0e3e5;
+  --el-color-info-light-8: #edeff1;
+  --el-color-info-light-9: #f6f7f8;
+  --el-color-info-dark-2: #6b7278;
+
+  /* ---------- 背景 / 文字 ---------- */
+  --el-bg-color: #ffffff;
+  --el-bg-color-page: #f7f8fa;
+  --el-bg-color-overlay: #ffffff;
+  --el-fill-color: #f2f3f5;
+  --el-fill-color-light: #f6f7f9;
+  --el-fill-color-lighter: #fafbfc;
+  --el-fill-color-extra-light: #fafbfc;
+  --el-fill-color-dark: #e9ebef;
+  --el-fill-color-darker: #dfe2e7;
+
+  --el-text-color-primary: #1f2328;
+  --el-text-color-regular: #3c4043;
+  --el-text-color-secondary: #6b7280;
+  --el-text-color-placeholder: #9ca3af;
+  --el-text-color-disabled: #c3cad1;
+
+  /* ---------- 边框 ---------- */
+  --el-border-color: #d8dde3;
+  --el-border-color-light: #e5e7eb;
+  --el-border-color-lighter: #eceef1;
+  --el-border-color-extra-light: #f3f4f6;
+  --el-border-color-dark: #c3cad1;
+  --el-border-color-hover: #aab4bf;
+
+  /* ---------- 圆角 / 阴影 / 字体 ---------- */
+  --el-border-radius-base: 6px;
+  --el-border-radius-small: 4px;
+  --el-border-radius-round: 9999px;
+
+  --el-box-shadow-light: 0 1px 2px rgba(16, 24, 40, 0.04);
+  --el-box-shadow-lighter: 0 1px 1px rgba(16, 24, 40, 0.03);
+  --el-box-shadow: 0 6px 24px rgba(16, 24, 40, 0.08);
+  --el-box-shadow-dark: 0 12px 32px rgba(16, 24, 40, 0.12);
+
+  --el-font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  --el-font-family-mono:
+    ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+  --el-font-size-base: 14px;
+
+  /* ---------- 按钮（默认/次要按钮的文档风） ---------- */
+  --el-button-bg-color: #ffffff;
+  --el-button-border-color: #c3cad1;
+  --el-button-text-color: #3c4043;
+  --el-button-hover-bg-color: #f7f8fa;
+  --el-button-hover-border-color: #aab4bf;
+  --el-button-hover-text-color: #1f2328;
+  --el-button-active-bg-color: #eef0f3;
+  --el-button-active-border-color: #9aa5b0;
+  --el-button-active-text-color: #1f2328;
+  --el-button-disabled-bg-color: #ffffff;
+  --el-button-disabled-border-color: #e5e7eb;
+  --el-button-disabled-text-color: #c3cad1;
+
+  /* ---------- 输入框 ---------- */
+  --el-input-hover-border-color: #aab4bf;
+  --el-input-focus-border-color: #3451b2;
+  --el-input-bg-color: #ffffff;
+
+  /* ---------- 表格：柔和绿系，细分割线 + 紧凑排版 ---------- */
+  --el-table-border-color: #eef0f2;
+  --el-table-header-bg-color: #eef7f0;
+  --el-table-header-text-color: #1f5132;
+  --el-table-text-color: #3c4043;
+  --el-table-font-size: 13px;
+  --el-table-row-height: 44px;
+  --el-table-bg-color: #ffffff;
+  --el-table-tr-bg-color: #ffffff;
+  --el-table-row-hover-bg-color: #f2faf4;
+}
+
+/* ---------- 全局排版 ---------- */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  font-family: var(--el-font-family);
+  font-size: 14px;
+  line-height: 1.7;
+  color: #3c4043;
+  background-color: #f7f8fa;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #1f2328;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* ---------- 文档通用卡片 ---------- */
+.docs-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.04);
+}
+
+/* ---------- 数据表微调 ---------- */
+.el-table {
+  /* 数字列等宽对齐 */
+  font-variant-numeric: tabular-nums;
+}
+.el-table th.el-table__cell {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- 弹窗 / 提示 ---------- */
+.el-message-box {
+  border-radius: 10px;
+  box-shadow: var(--el-box-shadow);
+}
+.el-message {
+  border-radius: 8px;
+  box-shadow: var(--el-box-shadow-light);
+}
+
+/* ---------- 分页：更收敛 ---------- */
+.el-pagination {
+  --el-pagination-button-bg-color: #ffffff;
+  --el-pagination-hover-color: #3451b2;
+  font-family: inherit;
+}
+
+/* ---------- 链接按钮文字色随主题 ---------- */
+.el-button.is-link {
+  --el-button-text-color: #3451b2;
+}
+
+/* ---------- 按钮直角（保留圆形图标按钮） ---------- */
+.el-button:not(.is-circle) {
+  border-radius: 0;
+}

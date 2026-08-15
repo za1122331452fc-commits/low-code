@@ -1,0 +1,35 @@
+:root {
+  // 主色调（文档风靛蓝）
+  --primary-color: #3451b2;
+  --success-color: #2f9e44;
+  --warning-color: #e67700;
+  --error-color: #e03131;
+  --info-color: #868e96;
+  // 边框 / 背景
+  --border-color: #e5e7eb;
+  --background-color: #f8f9fb;
+  --white: #fff;
+  --black: #000;
+  // 文字
+  --font-color: #1f2328;
+  --font-color-light: #3c4043;
+  --font-color-lighter: #6b7280;
+  --font-color-lightest: #d1d5db;
+  --font-size-base: 14px;
+  --font-size-sm: 12px;
+  --font-size-lg: 16px;
+  --border-radius-base: 6px;
+  --border-radius-sm: 4px;
+  --border-radius-md: 6px;
+  --border-radius-lg: 10px;
+  --padding-base: 15px;
+  --padding-sm: 10px;
+  --padding-lg: 20px;
+  --margin-base: 15px;
+  --margin-sm: 10px;
+  --margin-xs: 5px;
+  --margin-lg: 20px;
+  --line-height-base: 1.7;
+  --line-height-sm: 1.33;
+  --line-height-lg: 1.8;
+}

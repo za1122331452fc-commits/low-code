@@ -1,0 +1,25 @@
+{
+  "include": [
+    "vite.config.*",
+    "vitest.config.*",
+    "cypress.config.*",
+    "nightwatch.conf.*",
+    "playwright.config.*"
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "noEmit": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+
+    // 不再 extends @tsconfig/node22（其 lib 用了 TS5.6 不认的 es2024/ESNext.Array），直接写全
+    "target": "es2022",
+    "lib": ["es2023", "esnext.array", "esnext.collection", "esnext.iterator"],
+
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "types": ["node"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  }
+}
