@@ -1,5 +1,5 @@
 # 低代码问卷平台
-
+官方链接 ：http://njz.dpdns.org/
 一个前后端分离的全栈低代码问卷系统：支持 Schema 驱动的可视化问卷编辑器、组件市场、在线发布答题、统计报表、PDF 答题卡导出以及后台用户/问卷管理。
 
 - 前端：Vue 3 + TypeScript + Vite + Pinia + Element Plus + TanStack Query
@@ -11,13 +11,13 @@
 
 ### 编辑器
 - **Schema 驱动的低代码构建器**：组件注册表+ 数据驱动的配置面板，新增题型只需注册一行，配置面板零改动
-- **撤销/重做**：命令式历史链（ADD/DELETE/MOVE/UPDATE 判别联合）+ 50 层栈深度限制，低内存占用
+- **撤销/重做**：命令式历史链 + 50 层栈深度限制，低内存占用
 - **双数据源**：IndexedDB 本地缓存优先 + 服务端持久化兜底，编辑问卷秒开
 - **分片渲染**：大问卷先渲染首屏，`requestAnimationFrame` 分批追加，避免卡顿
 
 ### 问卷全流程
 - 组件市场（选择类 / 填空类 / 高级类 / 备注类 / 设定类 ）
-- 预览、在线发布答题（公开链接）、答题统计、答题明细
+- 预览、在线发布答题、答题统计、答题明细
 - **PDF 答题卡导出**：单次 html2canvas 截图 + 坐标切片分页
 
 ### 工程与安全
@@ -70,7 +70,6 @@
 ### 1. 启动后端
 
 ```bash
-cd low-code
 npm install
 ```
 
@@ -110,16 +109,16 @@ npm run dev
 
 ### 前端（survey）
 ```bash
-npm run dev            # 开发服务器
-npm run build          # 类型检查 + 构建（产物在 dist/）
-npm run type-check     # vue-tsc 类型检查
-npm run lint           # ESLint
-npm run format         # Prettier 格式化
+npm run dev            
+npm run build          
+npm run type-check    
+npm run lint           
+npm run format         
 ```
 
 ### 后端（low-code）
 ```bash
-npm start              # node ./bin/www（默认 3000 端口）
+npm start             
 ```
 
 ---
@@ -132,7 +131,7 @@ cd survey && npm run build
 ```
 
 ### 后端
-后端为纯 Node，无需构建，打包源码即可（**排除 node_modules / public/uploads / .env**）：
+后端为纯 Node，无需构建，打包源码即可
 
 
 ### Nginx 部署前端
