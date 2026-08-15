@@ -1,7 +1,7 @@
 # 低代码问卷平台
-官方链接 ：http://njz.dpdns.org/
-一个前后端分离的全栈低代码问卷系统：支持 Schema 驱动的可视化问卷编辑器、组件市场、在线发布答题、统计报表、PDF 答题卡导出以及后台用户/问卷管理。
+官方链接 ：http://njz.dpdns.org
 
+一个前后端分离的全栈低代码问卷系统：支持 Schema 驱动的可视化问卷编辑器、组件市场、在线发布答题、统计报表、PDF 答题卡导出以及后台用户/问卷管理。
 - 前端：Vue 3 + TypeScript + Vite + Pinia + Element Plus + TanStack Query
 - 后端：Express + JWT + Sequelize(MySQL) 
 
